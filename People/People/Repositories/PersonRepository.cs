@@ -19,28 +19,70 @@ namespace People.Repositories
 
         public List<Person> FindAll()
         {
-            List<Person> people = _db.People.ToList();
+            var people = _db.People.ToList();
             return people;
         }
 
         public Person FindById(int id)
         {
-            throw new NotImplementedException();
+            var person = _db.People.Find(id);
+            return person;
         }
 
         public ExitCode Add(Person obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                obj.Personid = _db.People.Count() + 1;
+                _db.People.Add(obj);
+                _db.SaveChanges();
+                _logger.LogInformation("+PersonRep : Person {Number} was added to People", obj.Personid);
+                return ExitCode.Success;
+            }
+            catch (Exception err)
+            {
+                _logger.LogError(err, "+PersonRep : Error trying to add person to People");
+                return ExitCode.Error;
+            }
         }
 
         public ExitCode Update(Person obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Person uPerson = FindById(obj.Personid);
+                uPerson.Firstname = obj.Firstname;
+                uPerson.Lastname = obj.Lastname;
+                uPerson.Gender = obj.Gender;
+                uPerson.Age = obj.Age;
+
+                _db.People.Update(uPerson);
+                _db.SaveChanges();
+                _logger.LogInformation("+PersonRep : Person {Number} was updated at People", obj.Personid);
+                return ExitCode.Success;
+            }
+            catch (Exception err)
+            {
+                _logger.LogError(err, "+PersonRep : Error trying to update person to People");
+                return ExitCode.Error;
+            }
         }
 
         public ExitCode DeleteById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Person food = FindById(id);
+                _db.People.Remove(food);
+                _db.SaveChanges();
+                _logger.LogInformation("+PersonRep : Person {Number} was deleted from People", id);
+                return ExitCode.Success;
+            }
+            catch (Exception err)
+            {
+                _logger.LogError(err, "+PersonRep : Error trying to delete person {Number} from People", id);
+                return ExitCode.Error;
+            }
         }
         
         public void Dispose()
