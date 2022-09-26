@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 #nullable disable
 
 namespace People.ModelsDB
 {
-    public partial class Person
+    public class Person
     {
         public int Personid { get; set; }
         public string Firstname { get; set; }

@@ -1,37 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Extensions.Logging;
-using People.ModelsBL;
 using People.ModelsDB;
 
 namespace People.Repositories
 {
     public class PersonRepository : IPersonRepository, IDisposable
     {
-        private readonly personContext _db;
+        private readonly PeopleContext _db;
         private readonly ILogger<PersonRepository> _logger;
-        
-        public void Dispose()
+
+        public PersonRepository(PeopleContext createDB, ILogger<PersonRepository> logDB)
         {
-            _db.Dispose();
+            _db = createDB;
+            _logger = logDB;
         }
 
-        public List<PersonBL> FindAll()
+        public List<Person> FindAll()
         {
-            throw new NotImplementedException();
+            List<Person> people = _db.People.ToList();
+            return people;
         }
 
-        public PersonBL FindById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ExitCode Add(PersonBL obj)
+        public Person FindById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public ExitCode Update(PersonBL obj)
+        public ExitCode Add(Person obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ExitCode Update(Person obj)
         {
             throw new NotImplementedException();
         }
@@ -39,6 +41,11 @@ namespace People.Repositories
         public ExitCode DeleteById(int id)
         {
             throw new NotImplementedException();
+        }
+        
+        public void Dispose()
+        {
+            _db.Dispose();
         }
     }
 }

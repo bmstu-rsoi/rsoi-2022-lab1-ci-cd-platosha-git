@@ -1,9 +1,21 @@
-﻿using People.ModelsBL;
+﻿using System.Collections.Generic;
+using People.ModelsDB;
 
 namespace People.Repositories
 {
-    public interface IPersonRepository : CrudRepository<PersonBL, int>
+    public enum ExitCode
     {
-        
+        Success,
+        Constraint,
+        Error
+    }
+    
+    public interface IPersonRepository
+    {
+        List<Person> FindAll();
+        Person FindById(int id);
+        ExitCode Add(Person obj);
+        ExitCode Update(Person obj);
+        ExitCode DeleteById(int id);
     }
 }

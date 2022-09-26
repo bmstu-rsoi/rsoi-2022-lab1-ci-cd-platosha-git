@@ -4,13 +4,13 @@
 
 namespace People.ModelsDB
 {
-    public partial class personContext : DbContext
+    public partial class PeopleContext : DbContext
     {
-        public personContext()
+        public PeopleContext()
         {
         }
 
-        public personContext(DbContextOptions<personContext> options)
+        public PeopleContext(DbContextOptions<PeopleContext> options)
             : base(options)
         {
         }
