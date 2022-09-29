@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using People.WebControllers;
 using People.ModelsDB;
+using People.ModelsDTO;
 
 namespace People.APIControllers
 {
@@ -17,11 +18,23 @@ namespace People.APIControllers
             _personController = personController;
         }
         
+        private List<PersonDTO> ListPersonDTO(List<Person> people)
+        {
+            var peopleDTO = new List<PersonDTO>();
+            foreach (var person in people)
+            {
+                var personDTO = new PersonDTO(person);
+                peopleDTO.Add(personDTO);
+            }
+
+            return peopleDTO;
+        }
+        
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Person>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult GetAllFood()
+        public IActionResult GetAllPeople()
         {
             List<Person> people = _personController.GetAllPeople();
             if (people.Count == 0)
@@ -29,8 +42,8 @@ namespace People.APIControllers
                 return NoContent();
             }
 
-            List<FoodDTO> lFoodDTO = ListFoodDTO(people);
-            return Ok(lFoodDTO);
+            List<PersonDTO> lPersonDTO = ListPersonDTO(people);
+            return Ok(lPersonDTO);
         }
     }
 }

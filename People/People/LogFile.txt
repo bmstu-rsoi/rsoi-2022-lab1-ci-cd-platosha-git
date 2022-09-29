@@ -1,0 +1,34 @@
+2022-09-29 10:49:21.725 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-29 10:49:21.772 +03:00 [INF] Creating key {910d7cc7-21a9-47a0-acba-5e328daa5027} with creation date 2022-09-29 07:49:21Z, activation date 2022-09-29 07:49:21Z, and expiration date 2022-12-28 07:49:21Z.
+2022-09-29 10:49:21.801 +03:00 [INF] Writing data to file 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys\key-910d7cc7-21a9-47a0-acba-5e328daa5027.xml'.
+2022-09-29 10:49:22.124 +03:00 [INF] Now listening on: https://localhost:5001
+2022-09-29 10:49:22.124 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-29 10:49:22.125 +03:00 [INF] Hosting environment: Development
+2022-09-29 10:49:22.125 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-09-29 10:49:22.694 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2022-09-29 10:49:22.738 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 301 0 - 45.9530ms
+2022-09-29 10:49:22.746 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-09-29 10:49:22.814 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 68.7148ms
+2022-09-29 10:49:22.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2022-09-29 10:49:22.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2022-09-29 10:49:22.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2022-09-29 10:49:22.891 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-09-29 10:49:22.891 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-09-29 10:49:22.891 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-09-29 10:49:22.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 41.6272ms
+2022-09-29 10:49:22.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 41.6580ms
+2022-09-29 10:49:22.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 142933 text/css 41.8277ms
+2022-09-29 10:49:23.135 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-09-29 10:49:23.232 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.0818ms
+2022-09-29 10:49:26.519 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/v1/persons - -
+2022-09-29 10:49:26.543 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-09-29 10:49:26.567 +03:00 [INF] Route matched with {action = "GetAllPeople", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPeople() on controller People.APIControllers.ApiPersonController (People).
+2022-09-29 10:49:27.375 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-09-29 10:49:28.187 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.age, p.firstname, p.gender, p.lastname, p.personid
+FROM person AS p
+2022-09-29 10:49:28.203 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[People.ModelsDTO.PersonDTO, People, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-29 10:49:28.331 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.GetAllPeople (People) in 1755.8414ms
+2022-09-29 10:49:28.331 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-09-29 10:49:28.335 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/v1/persons - - - 200 778 application/json;+charset=utf-8 1815.9330ms
+2022-09-29 10:49:40.254 +03:00 [INF] Application is shutting down...
