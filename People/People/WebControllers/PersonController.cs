@@ -24,6 +24,12 @@ namespace People.WebControllers
             var person = _personRepository.FindById(personId);
             return person;
         }
+        
+        public List<Person> GetPeopleByAge(int age)
+        {
+            var people = _personRepository.FindByAge(age);
+            return people;
+        }
 
         public ExitCode AddPerson(Person person)
         {

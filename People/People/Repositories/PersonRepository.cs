@@ -28,6 +28,13 @@ namespace People.Repositories
             var person = _db.People.Find(id);
             return person;
         }
+        
+        public List<Person> FindByAge(int age)
+        {
+            var people = _db.People.Where(needed => needed.Age == age);
+            var lPeople = people.ToList();
+            return lPeople;
+        }
 
         public ExitCode Add(Person obj)
         {
