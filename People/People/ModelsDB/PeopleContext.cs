@@ -32,8 +32,6 @@ namespace People.ModelsDB
 
             modelBuilder.Entity<Person>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("person");
 
                 entity.Property(e => e.Age).HasColumnName("age");

@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using People.WebControllers;
 using People.ModelsDB;
 using People.ModelsDTO;
+using People.Repositories;
 
 namespace People.APIControllers
 {
@@ -30,6 +32,10 @@ namespace People.APIControllers
             return peopleDTO;
         }
         
+        /// <summary>Get all people</summary>
+        /// <returns>People information</returns>
+        /// <response code="200">People found</response>
+        /// <response code="204">No people</response>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Person>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -44,6 +50,116 @@ namespace People.APIControllers
 
             List<PersonDTO> lPersonDTO = ListPersonDTO(people);
             return Ok(lPersonDTO);
+        }
+        
+        /// <summary>Person by ID</summary>
+        /// <returns>Person information</returns>
+        /// <response code="200">Person found</response>
+        /// <response code="404">No person</response>
+        [HttpGet]
+        [Route("{personId:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetPersonById([FromRoute(Name = "personId")] int personID)
+        {
+            var person = _personController.GetPersonById(personID);
+            if (person is null)
+            {
+                return NotFound();
+            }
+
+            var foodDTO = new PersonDTO(person);
+            return Ok(foodDTO);
+        }
+        
+        /// <summary>Adding person</summary>
+        /// <param name="personDTO">Person to add</param>
+        /// <returns>Added person</returns>
+        /// <response code="201">Person added</response>
+        /// <response code="409">Constraint error</response>
+        /// <response code="500">Internal server error</response>
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult AddPerson([FromBody] PersonDTO personDTO)
+        {
+            var person = personDTO.GetPerson();
+            var result = _personController.AddPerson(person);
+            
+            if (result == ExitCode.Constraint) 
+            {
+                return Conflict();
+            }
+
+            if (result == ExitCode.Error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            
+            return StatusCode(StatusCodes.Status201Created);
+        }
+        
+        /// <summary>Updating person</summary>
+        /// <param name="personDTO">Food to update</param>
+        /// <returns>Updated person</returns>
+        /// <response code="200">Person updated</response>
+        /// <response code="409">Constraint error</response>
+        /// <response code="500">Internal server error</response>
+        [HttpPatch]
+        [Route("{personId:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult UpdateFood(
+            [FromRoute(Name = "personId")] int personID, 
+            [FromBody] PersonDTO personDTO)
+        {
+            Person person = personDTO.GetPerson(personID);
+            ExitCode result = _personController.UpdatePerson(person);
+            
+            if (result == ExitCode.Constraint) 
+            {
+                return Conflict();
+            }
+
+            if (result == ExitCode.Error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+
+            var updatedPerson = new PersonDTO(person);
+            return Ok(updatedPerson);
+        }
+
+        /// <summary>Removing person by ID</summary>
+        /// <returns>Removed person</returns>
+        /// <response code="200">Person removed</response>
+        /// <response code="404">No person</response>
+        /// <response code="500">Internal server error</response>
+        [HttpDelete]
+        [Route("{personId:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult DeleteFood([FromRoute(Name = "personId")] int personID)
+        {
+            var person = _personController.GetPersonById(personID);
+            if (person == null)
+            {
+                return NotFound();
+            }
+            
+            ExitCode result = _personController.DeletePersonById(personID);
+            if (result == ExitCode.Error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            
+            var personDTO = new PersonDTO(person);
+            return Ok(personDTO);
         }
     }
 }

@@ -1,4 +1,4 @@
-INSERT INTO Person (PersonID, FirstName, LastName, Gender, Age)
+INSERT INTO Person (Personid, Firstname, Lastname, Gender, Age)
 VALUES
 (1, 'Richard', 'Williams', 'M', 23),
 (2, 'Marie', 'Simmons', 'F', 31),

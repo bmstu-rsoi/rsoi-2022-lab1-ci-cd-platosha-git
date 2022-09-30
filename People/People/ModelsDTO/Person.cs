@@ -10,6 +10,8 @@ namespace People.ModelsDTO
         public string Gender { get; set; }
         public int Age { get; set; }
 
+        public PersonDTO() { }
+        
         public PersonDTO(Person person)
         {
             Personid = person.Personid;
@@ -17,6 +19,20 @@ namespace People.ModelsDTO
             Lastname = person.Lastname;
             Gender = person.Gender;
             Age = person.Age;
+        }
+
+        public Person GetPerson(int personID = 0)
+        {
+            var person = new Person()
+            {
+                Personid = personID,
+                Firstname = Firstname,
+                Lastname = Lastname,
+                Gender = Gender,
+                Age = Age
+            };
+
+            return person;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using People.ModelsDB;
 using People.Repositories;
 
@@ -20,7 +21,8 @@ namespace People.WebControllers
 
         public Person GetPersonById(int personId)
         {
-            return _personRepository.FindById(personId);
+            var person = _personRepository.FindById(personId);
+            return person;
         }
 
         public ExitCode AddPerson(Person person)
