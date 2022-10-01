@@ -66,5 +66,28 @@ namespace PeopleTests
             Assert.NotNull(expPeople);
             Assert.Equal(expPeople, actPeople);
         }
+
+        [Fact]
+        public void AddPerson_Ok()
+        {
+            var person = new Person()
+            {
+                Personid = 11,
+                Firstname = "Test",
+                Lastname = "Adding",
+                Gender = "F",
+                Age = 1
+            };
+
+            var mock = new Mock<IPersonRepository>();
+            mock.Setup(x => x.Add(person))
+                .Returns(ExitCode.Success);
+            var personController = new PersonController(mock.Object);
+            
+            var addedPerson = personController.GetPersonById(11);
+            
+            //Assert.NotNull(addedPerson);
+            Assert.Equal(person, addedPerson);
+        }
     }
 }
