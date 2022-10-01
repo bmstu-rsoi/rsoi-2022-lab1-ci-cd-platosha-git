@@ -81,19 +81,13 @@ namespace People.APIControllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult AddPerson([FromBody] PersonDTO personDTO)
         {
             var person = personDTO.GetPerson();
             var result = _personController.AddPerson(person);
-            
-            if (result == ExitCode.Constraint) 
-            {
-                return Conflict();
-            }
 
-            if (result == ExitCode.Error)
+            if (result < 0)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }

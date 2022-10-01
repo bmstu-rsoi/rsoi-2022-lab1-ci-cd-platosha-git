@@ -28,28 +28,24 @@ namespace People.Repositories
             var person = _db.People.Find(id);
             return person;
         }
-        
-        public List<Person> FindByAge(int age)
-        {
-            var people = _db.People.Where(needed => needed.Age == age);
-            var lPeople = people.ToList();
-            return lPeople;
-        }
 
-        public ExitCode Add(Person obj)
+        public int Add(Person obj)
         {
             try
             {
-                obj.Personid = _db.People.Count() + 1;
+                var id = _db.People.Count() + 1;
+                
+                obj.Personid = id;
                 _db.People.Add(obj);
                 _db.SaveChanges();
+                
                 _logger.LogInformation("+PersonRep : Person {Number} was added to People", obj.Personid);
-                return ExitCode.Success;
+                return id;
             }
             catch (Exception err)
             {
                 _logger.LogError(err, "+PersonRep : Error trying to add person to People");
-                return ExitCode.Error;
+                throw;
             }
         }
 
