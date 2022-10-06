@@ -14,7 +14,7 @@ namespace People.Repositories
     {
         List<Person> FindAll();
         Person FindById(int id);
-        int Add(Person obj);
+        Person Add(Person obj);
         ExitCode Update(Person obj);
         ExitCode DeleteById(int id);
     }

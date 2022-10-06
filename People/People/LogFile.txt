@@ -443,3 +443,344 @@ LIMIT 1
 2022-09-30 15:25:45.197 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.GetPersonById (People)'
 2022-09-30 15:25:45.197 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/v1/persons/1 - - - 200 80 application/json;+charset=utf-8 89.1388ms
 2022-09-30 15:25:48.859 +03:00 [INF] Application is shutting down...
+2022-10-06 16:41:14.146 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 16:41:14.453 +03:00 [INF] Now listening on: https://localhost:5001
+2022-10-06 16:41:14.453 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 16:41:14.453 +03:00 [INF] Hosting environment: Development
+2022-10-06 16:41:14.454 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 16:41:14.995 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2022-10-06 16:41:15.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 301 0 - 38.5523ms
+2022-10-06 16:41:15.042 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-10-06 16:41:15.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 48.3996ms
+2022-10-06 16:41:15.117 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2022-10-06 16:41:15.117 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2022-10-06 16:41:15.117 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2022-10-06 16:41:15.143 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-10-06 16:41:15.143 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-10-06 16:41:15.144 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-10-06 16:41:15.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 29.0848ms
+2022-10-06 16:41:15.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 142933 text/css 29.1812ms
+2022-10-06 16:41:15.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 29.1062ms
+2022-10-06 16:41:15.358 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-10-06 16:41:15.388 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - -
+2022-10-06 16:41:15.389 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-10-06 16:41:15.390 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 1.2442ms
+2022-10-06 16:41:15.535 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 177.1572ms
+2022-10-06 16:41:27.774 +03:00 [INF] Application is shutting down...
+2022-10-06 16:42:15.919 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 16:42:16.085 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 16:42:16.085 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 16:42:16.086 +03:00 [INF] Hosting environment: Development
+2022-10-06 16:42:16.086 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 16:43:05.695 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - -
+2022-10-06 16:43:05.764 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 72.0807ms
+2022-10-06 16:43:05.795 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-bundle.js - -
+2022-10-06 16:43:05.795 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2022-10-06 16:43:05.796 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui.css - -
+2022-10-06 16:43:05.821 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-10-06 16:43:05.821 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-10-06 16:43:05.822 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-10-06 16:43:05.824 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 29.7230ms
+2022-10-06 16:43:05.824 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 29.7230ms
+2022-10-06 16:43:05.824 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui.css - - - 200 142933 text/css 28.0441ms
+2022-10-06 16:43:05.987 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - -
+2022-10-06 16:43:06.017 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/favicon-32x32.png - -
+2022-10-06 16:43:06.019 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-10-06 16:43:06.019 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 2.0290ms
+2022-10-06 16:43:06.139 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 152.4227ms
+2022-10-06 16:43:13.905 +03:00 [INF] Application is shutting down...
+2022-10-06 17:03:15.608 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 17:03:15.841 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 17:03:15.842 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 17:03:15.842 +03:00 [INF] Hosting environment: Development
+2022-10-06 17:03:15.842 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 17:03:23.712 +03:00 [INF] Application is shutting down...
+2022-10-06 17:10:39.685 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 17:10:39.862 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 17:10:39.862 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 17:10:39.863 +03:00 [INF] Hosting environment: Development
+2022-10-06 17:10:39.863 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 17:10:44.691 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - -
+2022-10-06 17:10:44.762 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 74.3464ms
+2022-10-06 17:10:44.907 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - -
+2022-10-06 17:10:45.065 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 157.5936ms
+2022-10-06 17:10:52.985 +03:00 [INF] Application is shutting down...
+2022-10-06 19:04:57.679 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 19:04:57.959 +03:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://[::1]:5001: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Обычно разрешается только одно использование адреса сокета (протокол/сетевой адрес/порт).
+ ---> System.Net.Sockets.SocketException (10048): Обычно разрешается только одно использование адреса сокета (протокол/сетевой адрес/порт).
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass29_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2022-10-06 19:07:02.921 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 19:07:03.142 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 19:07:03.142 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 19:07:03.143 +03:00 [INF] Hosting environment: Development
+2022-10-06 19:07:03.143 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 19:07:08.690 +03:00 [INF] Application is shutting down...
+2022-10-06 19:07:26.290 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 19:07:26.501 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 19:07:26.502 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 19:07:26.502 +03:00 [INF] Hosting environment: Development
+2022-10-06 19:07:26.502 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 19:07:37.377 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - -
+2022-10-06 19:07:37.507 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 133.8721ms
+2022-10-06 19:07:37.546 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/favicon.ico - -
+2022-10-06 19:07:37.588 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/favicon.ico - - - 404 0 - 42.0753ms
+2022-10-06 19:07:38.022 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - -
+2022-10-06 19:07:38.262 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 239.5049ms
+2022-10-06 19:07:41.190 +03:00 [INF] Application is shutting down...
+2022-10-06 19:19:07.686 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 19:19:07.892 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 19:19:07.893 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 19:19:07.893 +03:00 [INF] Hosting environment: Development
+2022-10-06 19:19:07.894 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 19:19:13.128 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - -
+2022-10-06 19:19:13.263 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 140.1668ms
+2022-10-06 19:19:13.295 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/favicon.ico - -
+2022-10-06 19:19:13.329 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/favicon.ico - - - 404 0 - 34.2125ms
+2022-10-06 19:19:13.782 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - -
+2022-10-06 19:19:14.032 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.1431ms
+2022-10-06 19:19:18.206 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/persons - -
+2022-10-06 19:19:18.208 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-10-06 19:19:18.249 +03:00 [INF] Route matched with {action = "GetAllPeople", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPeople() on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:19:19.123 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:19:20.533 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+2022-10-06 19:19:20.606 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[People.ModelsDTO.PersonDTO, People, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-06 19:19:20.654 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.GetAllPeople (People) in 2396.5354ms
+2022-10-06 19:19:20.654 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-10-06 19:19:20.658 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/persons - - - 200 778 application/json;+charset=utf-8 2452.0327ms
+2022-10-06 19:19:53.419 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/v1/persons application/json-patch+json 73
+2022-10-06 19:19:53.420 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.AddPerson (People)'
+2022-10-06 19:19:53.444 +03:00 [INF] Route matched with {action = "AddPerson", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPerson(People.ModelsDTO.PersonDTO) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:19:53.539 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:19:53.610 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM person AS p
+2022-10-06 19:19:53.712 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO person (personid, age, firstname, gender, lastname)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2022-10-06 19:19:53.728 +03:00 [INF] +PersonRep : Person 11 was added to People
+2022-10-06 19:19:53.730 +03:00 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-10-06 19:19:53.768 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.AddPerson (People) in 323.9951ms
+2022-10-06 19:19:53.769 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.AddPerson (People)'
+2022-10-06 19:19:53.819 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.ObjectResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-06 19:19:53.828 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/v1/persons application/json-patch+json 73 - 500 - text/plain 408.5497ms
+2022-10-06 19:20:05.323 +03:00 [INF] Application is shutting down...
+2022-10-06 19:21:31.078 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 19:21:31.240 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 19:21:31.241 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 19:21:31.241 +03:00 [INF] Hosting environment: Development
+2022-10-06 19:21:31.241 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 19:21:34.722 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - -
+2022-10-06 19:21:34.839 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 120.6107ms
+2022-10-06 19:21:35.050 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - -
+2022-10-06 19:21:35.318 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 268.1175ms
+2022-10-06 19:21:40.057 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/persons - -
+2022-10-06 19:21:40.105 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-10-06 19:21:40.136 +03:00 [INF] Route matched with {action = "GetAllPeople", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPeople() on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:21:40.968 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:21:41.991 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+2022-10-06 19:21:42.058 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[People.ModelsDTO.PersonDTO, People, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-06 19:21:42.102 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.GetAllPeople (People) in 1957.5974ms
+2022-10-06 19:21:42.103 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-10-06 19:21:42.106 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/persons - - - 200 852 application/json;+charset=utf-8 2048.8313ms
+2022-10-06 19:22:02.904 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/v1/persons application/json-patch+json 72
+2022-10-06 19:22:02.905 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.AddPerson (People)'
+2022-10-06 19:22:02.920 +03:00 [INF] Route matched with {action = "AddPerson", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPerson(People.ModelsDTO.PersonDTO) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:22:03.011 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:22:03.075 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM person AS p
+2022-10-06 19:22:03.189 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO person (personid, age, firstname, gender, lastname)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2022-10-06 19:22:03.211 +03:00 [INF] +PersonRep : Person 12 was added to People
+2022-10-06 19:22:03.214 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'People.ModelsDB.Person'.
+2022-10-06 19:22:03.250 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.AddPerson (People) in 329.7542ms
+2022-10-06 19:22:03.252 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.AddPerson (People)'
+2022-10-06 19:22:03.310 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.ObjectResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-06 19:22:03.320 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/v1/persons application/json-patch+json 72 - 500 - text/plain 416.0421ms
+2022-10-06 19:22:22.144 +03:00 [INF] Application is shutting down...
+2022-10-06 19:31:22.932 +03:00 [INF] User profile is available. Using 'C:\Users\plato\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 19:31:23.198 +03:00 [INF] Now listening on: http://localhost:5001
+2022-10-06 19:31:23.199 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 19:31:23.199 +03:00 [INF] Hosting environment: Development
+2022-10-06 19:31:23.200 +03:00 [INF] Content root path: C:\Users\plato\OneDrive\Рабочий стол\BMSTU\1m sem\rsoi-2022-lab1-ci-cd-platosha-git\People\People
+2022-10-06 19:31:26.943 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - -
+2022-10-06 19:31:27.039 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 97.5181ms
+2022-10-06 19:31:27.251 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - -
+2022-10-06 19:31:27.416 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 164.7850ms
+2022-10-06 19:31:29.769 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/persons - -
+2022-10-06 19:31:29.805 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-10-06 19:31:29.831 +03:00 [INF] Route matched with {action = "GetAllPeople", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPeople() on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:31:30.706 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:31:31.485 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+2022-10-06 19:31:31.565 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[People.ModelsDTO.PersonDTO, People, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-06 19:31:31.620 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.GetAllPeople (People) in 1777.9392ms
+2022-10-06 19:31:31.620 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.GetAllPeople (People)'
+2022-10-06 19:31:31.624 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/persons - - - 200 925 application/json;+charset=utf-8 1855.3986ms
+2022-10-06 19:31:39.351 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/persons/12 - -
+2022-10-06 19:31:39.352 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.GetPersonById (People)'
+2022-10-06 19:31:39.376 +03:00 [INF] Route matched with {action = "GetPersonById", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPersonById(Int32) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:31:39.419 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:31:39.539 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+WHERE p.personid = @__p_0
+LIMIT 1
+2022-10-06 19:31:39.541 +03:00 [INF] Executing OkObjectResult, writing value of type 'People.ModelsDTO.PersonDTO'.
+2022-10-06 19:31:39.542 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.GetPersonById (People) in 165.8536ms
+2022-10-06 19:31:39.542 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.GetPersonById (People)'
+2022-10-06 19:31:39.542 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/persons/12 - - - 200 72 application/json;+charset=utf-8 191.4725ms
+2022-10-06 19:32:03.765 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/v1/persons application/json-patch+json 72
+2022-10-06 19:32:03.765 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.AddPerson (People)'
+2022-10-06 19:32:03.768 +03:00 [INF] Route matched with {action = "AddPerson", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPerson(People.ModelsDTO.PersonDTO) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:32:03.836 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:32:03.860 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM person AS p
+2022-10-06 19:32:03.963 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO person (personid, age, firstname, gender, lastname)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2022-10-06 19:32:03.987 +03:00 [INF] +PersonRep : Person 13 was added to People
+2022-10-06 19:32:03.988 +03:00 [INF] Executing CreatedResult, writing value of type 'People.ModelsDB.Person'.
+2022-10-06 19:32:03.990 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.AddPerson (People) in 222.1787ms
+2022-10-06 19:32:03.990 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.AddPerson (People)'
+2022-10-06 19:32:03.991 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/v1/persons application/json-patch+json 72 - 201 73 application/json;+charset=utf-8 225.5222ms
+2022-10-06 19:32:29.934 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/13 - -
+2022-10-06 19:32:29.935 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:29.937 +03:00 [INF] Route matched with {action = "DeletePerson", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePerson(Int32) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:32:29.939 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:32:29.946 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+WHERE p.personid = @__p_0
+LIMIT 1
+2022-10-06 19:32:29.964 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM person
+WHERE personid = @p0;
+2022-10-06 19:32:29.969 +03:00 [INF] +PersonRep : Person 13 was deleted from People
+2022-10-06 19:32:29.969 +03:00 [INF] Executing OkObjectResult, writing value of type 'People.ModelsDTO.PersonDTO'.
+2022-10-06 19:32:29.969 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.DeletePerson (People) in 31.5954ms
+2022-10-06 19:32:29.969 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:29.970 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/13 - - - 200 73 application/json;+charset=utf-8 35.6513ms
+2022-10-06 19:32:35.282 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/13 - -
+2022-10-06 19:32:35.283 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:35.283 +03:00 [INF] Route matched with {action = "DeletePerson", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePerson(Int32) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:32:35.284 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:32:35.289 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+WHERE p.personid = @__p_0
+LIMIT 1
+2022-10-06 19:32:35.291 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-10-06 19:32:35.313 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.DeletePerson (People) in 29.2951ms
+2022-10-06 19:32:35.313 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:35.313 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/13 - - - 404 161 application/problem+json;+charset=utf-8 30.9512ms
+2022-10-06 19:32:40.702 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/12 - -
+2022-10-06 19:32:40.702 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:40.703 +03:00 [INF] Route matched with {action = "DeletePerson", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePerson(Int32) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:32:40.704 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:32:40.707 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+WHERE p.personid = @__p_0
+LIMIT 1
+2022-10-06 19:32:40.710 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM person
+WHERE personid = @p0;
+2022-10-06 19:32:40.720 +03:00 [INF] +PersonRep : Person 12 was deleted from People
+2022-10-06 19:32:40.720 +03:00 [INF] Executing OkObjectResult, writing value of type 'People.ModelsDTO.PersonDTO'.
+2022-10-06 19:32:40.721 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.DeletePerson (People) in 17.613ms
+2022-10-06 19:32:40.721 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:40.721 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/12 - - - 200 72 application/json;+charset=utf-8 19.1720ms
+2022-10-06 19:32:43.229 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/11 - -
+2022-10-06 19:32:43.229 +03:00 [INF] Executing endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:43.229 +03:00 [INF] Route matched with {action = "DeletePerson", controller = "ApiPerson"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePerson(Int32) on controller People.APIControllers.ApiPersonController (People).
+2022-10-06 19:32:43.230 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'PeopleContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2022-10-06 19:32:43.233 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p.personid, p.age, p.firstname, p.gender, p.lastname
+FROM person AS p
+WHERE p.personid = @__p_0
+LIMIT 1
+2022-10-06 19:32:43.235 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM person
+WHERE personid = @p0;
+2022-10-06 19:32:43.244 +03:00 [INF] +PersonRep : Person 11 was deleted from People
+2022-10-06 19:32:43.245 +03:00 [INF] Executing OkObjectResult, writing value of type 'People.ModelsDTO.PersonDTO'.
+2022-10-06 19:32:43.245 +03:00 [INF] Executed action People.APIControllers.ApiPersonController.DeletePerson (People) in 15.5283ms
+2022-10-06 19:32:43.245 +03:00 [INF] Executed endpoint 'People.APIControllers.ApiPersonController.DeletePerson (People)'
+2022-10-06 19:32:43.245 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/api/v1/persons/11 - - - 200 73 application/json;+charset=utf-8 16.4341ms
+2022-10-06 19:32:48.190 +03:00 [INF] Application is shutting down...

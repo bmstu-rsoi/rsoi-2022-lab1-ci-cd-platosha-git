@@ -25,7 +25,7 @@ namespace People.WebControllers
             return person;
         }
 
-        public int AddPerson(Person person)
+        public Person AddPerson(Person person)
         {
             return _personRepository.Add(person);
         }

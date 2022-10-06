@@ -29,7 +29,7 @@ namespace People.Repositories
             return person;
         }
 
-        public int Add(Person obj)
+        public Person Add(Person obj)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace People.Repositories
                 _db.SaveChanges();
                 
                 _logger.LogInformation("+PersonRep : Person {Number} was added to People", obj.Personid);
-                return id;
+                return obj;
             }
             catch (Exception err)
             {

@@ -68,8 +68,8 @@ namespace People.APIControllers
                 return NotFound();
             }
 
-            var foodDTO = new PersonDTO(person);
-            return Ok(foodDTO);
+            var personDTO = new PersonDTO(person);
+            return Ok(personDTO);
         }
         
         /// <summary>Adding person</summary>
@@ -87,16 +87,17 @@ namespace People.APIControllers
             var person = personDTO.GetPerson();
             var result = _personController.AddPerson(person);
 
-            if (result < 0)
+            if (result is null)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
-            
-            return StatusCode(StatusCodes.Status201Created);
+
+            var header = $"api/v1/persons/{result.Personid}";
+            return Created(header, person);
         }
         
         /// <summary>Updating person</summary>
-        /// <param name="personDTO">Food to update</param>
+        /// <param name="personDTO">Person to update</param>
         /// <returns>Updated person</returns>
         /// <response code="200">Person updated</response>
         /// <response code="409">Constraint error</response>
@@ -107,7 +108,7 @@ namespace People.APIControllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult UpdateFood(
+        public IActionResult UpdatePerson(
             [FromRoute(Name = "personId")] int personID, 
             [FromBody] PersonDTO personDTO)
         {
@@ -138,7 +139,7 @@ namespace People.APIControllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult DeleteFood([FromRoute(Name = "personId")] int personID)
+        public IActionResult DeletePerson([FromRoute(Name = "personId")] int personID)
         {
             var person = _personController.GetPersonById(personID);
             if (person == null)
