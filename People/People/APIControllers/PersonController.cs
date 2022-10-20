@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using People.WebControllers;
@@ -37,7 +36,7 @@ namespace People.APIControllers
         /// <response code="200">People found</response>
         /// <response code="204">No people</response>
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Person>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<PersonDTO>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GetAllPeople()
@@ -57,12 +56,12 @@ namespace People.APIControllers
         /// <response code="200">Person found</response>
         /// <response code="404">No person</response>
         [HttpGet]
-        [Route("{personId:int}")]
+        [Route("{Id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetPersonById([FromRoute(Name = "personId")] int personID)
+        public IActionResult GetPersonById([FromRoute(Name = "Id")] int id)
         {
-            var person = _personController.GetPersonById(personID);
+            var person = _personController.GetPersonById(id);
             if (person is null)
             {
                 return NotFound();
@@ -92,7 +91,7 @@ namespace People.APIControllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
-            var header = $"api/v1/persons/{result.Personid}";
+            var header = $"api/v1/persons/{result.Id}";
             return Created(header, person);
         }
         
@@ -103,16 +102,16 @@ namespace People.APIControllers
         /// <response code="409">Constraint error</response>
         /// <response code="500">Internal server error</response>
         [HttpPatch]
-        [Route("{personId:int}")]
+        [Route("{Id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult UpdatePerson(
-            [FromRoute(Name = "personId")] int personID, 
+            [FromRoute(Name = "Id")] int id, 
             [FromBody] PersonDTO personDTO)
         {
-            Person person = personDTO.GetPerson(personID);
+            Person person = personDTO.GetPerson(id);
             ExitCode result = _personController.UpdatePerson(person);
             
             if (result == ExitCode.Constraint) 
@@ -131,30 +130,29 @@ namespace People.APIControllers
 
         /// <summary>Removing person by ID</summary>
         /// <returns>Removed person</returns>
-        /// <response code="200">Person removed</response>
+        /// <response code="204">Person removed</response>
         /// <response code="404">No person</response>
         /// <response code="500">Internal server error</response>
         [HttpDelete]
-        [Route("{personId:int}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
+        [Route("{Id:int}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent, Type = typeof(PersonDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult DeletePerson([FromRoute(Name = "personId")] int personID)
+        public IActionResult DeletePerson([FromRoute(Name = "Id")] int id)
         {
-            var person = _personController.GetPersonById(personID);
+            var person = _personController.GetPersonById(id);
             if (person == null)
             {
                 return NotFound();
             }
             
-            ExitCode result = _personController.DeletePersonById(personID);
+            ExitCode result = _personController.DeletePersonById(id);
             if (result == ExitCode.Error)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
             
-            var personDTO = new PersonDTO(person);
-            return Ok(personDTO);
+            return NoContent();
         }
     }
 }

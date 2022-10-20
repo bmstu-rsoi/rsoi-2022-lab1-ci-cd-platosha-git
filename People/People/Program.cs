@@ -1,6 +1,5 @@
-using System.IO;
+using System;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace People
@@ -9,23 +8,16 @@ namespace People
     {
         public static void Main(string[] args)
         {
-            var config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-            CreateHostBuilder(args, config).Build().Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args, IConfiguration configuration) =>
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder => 
-                { webBuilder
-                    .UseStartup<Startup>()
-                    .UseUrls($"http://localhost:{configuration.GetValue<int>("Port")}"); 
-                }).ConfigureAppConfiguration((context, builder) =>
-                    builder.SetBasePath(Directory.GetCurrentDirectory())
-                        .AddJsonFile("appsettings.json")
-                        .Build()
-                );
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder
+                        .UseStartup<Startup>()
+                        .UseUrls("http://*:" + Environment.GetEnvironmentVariable("PORT"));
+                });
     }
 }

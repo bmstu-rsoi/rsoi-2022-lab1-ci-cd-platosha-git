@@ -37,13 +37,9 @@ namespace People
                 
             });
             services.AddSwaggerGenNewtonsoftSupport();
-            
-            IConfiguration config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .Build();
-            
-            AddDbContext(services, config);
-            AddLogging(services, config);
+
+            AddDbContext(services, Configuration);
+            AddLogging(services, Configuration);
             
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<PersonController>();
@@ -75,7 +71,8 @@ namespace People
         
         private static void AddDbContext(IServiceCollection services, IConfiguration config)
         {
-            services.AddDbContext<PeopleContext>(option => option.UseNpgsql(config["Connections:Current"]));
+            services.AddDbContext<PersonContext>(opt => 
+                opt.UseNpgsql(config.GetConnectionString("Heroku")));
         }
         
         private static void AddLogging(IServiceCollection services, IConfiguration config)
