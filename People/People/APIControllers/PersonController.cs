@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using People.WebControllers;
@@ -31,30 +32,22 @@ namespace People.APIControllers
             return peopleDTO;
         }
         
-        /// <summary>Get all people</summary>
+        /// <summary>Get all Persons</summary>
         /// <returns>People information</returns>
-        /// <response code="200">People found</response>
-        /// <response code="204">No people</response>
+        /// <response code="200">All Persons</response>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<PersonDTO>))]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GetAllPeople()
         {
             List<Person> people = _personController.GetAllPeople();
-            if (people.Count == 0)
-            {
-                return NoContent();
-            }
-
             List<PersonDTO> lPersonDTO = ListPersonDTO(people);
             return Ok(lPersonDTO);
         }
         
-        /// <summary>Person by ID</summary>
+        /// <summary>Get Person by ID</summary>
         /// <returns>Person information</returns>
-        /// <response code="200">Person found</response>
-        /// <response code="404">No person</response>
+        /// <response code="200">Person for ID</response>
+        /// <response code="404">Not found Person for ID</response>
         [HttpGet]
         [Route("{Id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
@@ -71,16 +64,14 @@ namespace People.APIControllers
             return Ok(personDTO);
         }
         
-        /// <summary>Adding person</summary>
+        /// <summary>Create new Person</summary>
         /// <param name="personDTO">Person to add</param>
         /// <returns>Added person</returns>
-        /// <response code="201">Person added</response>
-        /// <response code="409">Constraint error</response>
-        /// <response code="500">Internal server error</response>
+        /// <response code="201">Created new Person</response>
+        /// <response code="400">Invalid data</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult AddPerson([FromBody] PersonDTO personDTO)
         {
             var person = personDTO.GetPerson();
@@ -88,70 +79,84 @@ namespace People.APIControllers
 
             if (result is null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return BadRequest();
             }
 
             var header = $"api/v1/persons/{result.Id}";
             return Created(header, person);
         }
-        
-        /// <summary>Updating person</summary>
+
+        void FixedPatchFields(Person personToPatch, Person userPerson)
+        {
+            if (userPerson.Name != null && userPerson.Name != "string")
+            {
+                personToPatch.Name = userPerson.Name;
+            }
+            
+            if (userPerson.Address != null && userPerson.Address != "string")
+            {
+                personToPatch.Address = userPerson.Address;
+            }
+            
+            if (userPerson.Work != null && userPerson.Work != "string")
+            {
+                personToPatch.Work = userPerson.Work;
+            }
+
+            if (userPerson.Age > 0)
+            {
+                personToPatch.Age = userPerson.Age;
+            }
+        }
+
+        /// <summary>Update Person by ID</summary>
         /// <param name="personDTO">Person to update</param>
         /// <returns>Updated person</returns>
-        /// <response code="200">Person updated</response>
-        /// <response code="409">Constraint error</response>
-        /// <response code="500">Internal server error</response>
+        /// <response code="200">Person for ID was updated</response>
+        /// <response code="400">Invalid data</response>
+        /// <response code="404">Not found Person for ID</response>
         [HttpPatch]
         [Route("{Id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDTO))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult UpdatePerson(
-            [FromRoute(Name = "Id")] int id, 
-            [FromBody] PersonDTO personDTO)
-        {
-            Person person = personDTO.GetPerson(id);
-            ExitCode result = _personController.UpdatePerson(person);
-            
-            if (result == ExitCode.Constraint) 
-            {
-                return Conflict();
-            }
-
-            if (result == ExitCode.Error)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-
-            var updatedPerson = new PersonDTO(person);
-            return Ok(updatedPerson);
-        }
-
-        /// <summary>Removing person by ID</summary>
-        /// <returns>Removed person</returns>
-        /// <response code="204">Person removed</response>
-        /// <response code="404">No person</response>
-        /// <response code="500">Internal server error</response>
-        [HttpDelete]
-        [Route("{Id:int}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent, Type = typeof(PersonDTO))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult DeletePerson([FromRoute(Name = "Id")] int id)
+        public IActionResult PatchPerson([FromRoute(Name = "Id")] int id, [FromBody] PersonDTO personDTO)
         {
-            var person = _personController.GetPersonById(id);
-            if (person == null)
+            var personToPatch = _personController.GetPersonById(id);
+            if (personToPatch is null)
             {
                 return NotFound();
             }
             
-            ExitCode result = _personController.DeletePersonById(id);
-            if (result == ExitCode.Error)
+            var userPerson = personDTO.GetPerson(id);
+            FixedPatchFields(personToPatch, userPerson);
+            
+            /*Console.WriteLine("Id = " + personToPatch.Id);
+            Console.WriteLine("Name = " + personToPatch.Name);
+            Console.WriteLine("Age = " + personToPatch.Age);
+            Console.WriteLine("Address = " + personToPatch.Address);
+            Console.WriteLine("Work = " + personToPatch.Work);
+            */
+
+            ExitCode result = _personController.PatchPerson(personToPatch);
+            if (result == ExitCode.Constraint) 
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return BadRequest();
             }
             
+            var updatedPerson = new PersonDTO(personToPatch);
+            return Ok(updatedPerson);
+        }
+
+        /// <summary>Remove Person by ID</summary>
+        /// <returns>Removed person</returns>
+        /// <response code="204">Person removed</response>
+        [HttpDelete]
+        [Route("{Id:int}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent, Type = typeof(PersonDTO))]
+        public IActionResult DeletePerson([FromRoute(Name = "Id")] int id)
+        {
+            _personController.DeletePersonById(id);
             return NoContent();
         }
     }
